@@ -136,9 +136,17 @@ $btnUnlock_Click = {
 
     try {
 
-        #Odemčení uživatele a zobrazení dialogového okna.
+        <#
+        Odemčení uživatele a zobrazení dialogového okna.
+        Smazání dat z texboxu a listview, nakonec se kurzor zobrazí
+        v texboxu pro možnost psaní loginu dalšího uživatele.
+        #>
         Unlock-ADAccount -Identity $txtLogin.Text
         [System.Windows.Forms.MessageBox]::Show("Uzivatel odemcen", "Success")
+        $txtLogin.Clear()
+        $list.Items.Clear($item)
+        $list.Refresh()
+        $txtLogin.Focus()
 
     } catch {
         #Zobrazení dialogového okna s chybovou hláškou.
