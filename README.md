@@ -1,4 +1,4 @@
-# Optimalizace správy Active directory za využití Windows PowerShell
+# Optimalizace správy Active Directory za využití Windows PowerShell
 
 ## LAB 1 - Uživatelská identita v AD
 V prvním laboratorním cvičení je řešeno hromadné přidávání uživatelů do Active Directory. Script [LAB1.ps1](LABs/LAB1.ps1) 
